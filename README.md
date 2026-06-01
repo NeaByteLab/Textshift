@@ -4,7 +4,9 @@
 
 Zero-dependency text transformation and JSON formatting for any runtime
 
-[![Deno](https://img.shields.io/badge/deno-%3E%3D2.5.4-ffcb00?logo=deno&logoColor=000000)](https://deno.com) [![Module type: Deno/ESM](https://img.shields.io/badge/module%20type-deno%2Fesm-brightgreen)](https://github.com/NeaByteLab/Textshift) [![JSR](https://jsr.io/badges/@neabyte/textshift)](https://jsr.io/@neabyte/textshift) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Node](https://img.shields.io/badge/node-%3E%3D24-339933?logo=node.js&logoColor=white)](https://nodejs.org) [![Deno](https://img.shields.io/badge/deno-compatible-ffcb00?logo=deno&logoColor=000000)](https://deno.com) [![Bun](https://img.shields.io/badge/bun-compatible-f9f1e1?logo=bun&logoColor=000000)](https://bun.sh) [![CDN](https://img.shields.io/badge/cdn-jsdelivr%2Fesm.sh-blue)](https://cdn.jsdelivr.net/npm/@neabyte/textshift)
+
+[![Module type: Deno/ESM](https://img.shields.io/badge/module%20type-deno%2Fesm-brightgreen)](https://github.com/NeaByteLab/Textshift) [![npm version](https://img.shields.io/npm/v/@neabyte/textshift.svg)](https://www.npmjs.org/package/@neabyte/textshift) [![JSR](https://jsr.io/badges/@neabyte/textshift)](https://jsr.io/@neabyte/textshift) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 </div>
 
@@ -17,7 +19,7 @@ Zero-dependency text transformation and JSON formatting for any runtime
 ## Installation
 
 > [!NOTE]
-> **Prerequisites:** Deno >= 2.5.4 (install from [deno.com](https://deno.com/)).
+> **Prerequisites:** For **Deno** (install from [deno.com](https://deno.com/)). For **npm** use Node.js (e.g. [nodejs.org](https://nodejs.org/)).
 
 **Deno (JSR):**
 
@@ -28,7 +30,44 @@ deno add jsr:@neabyte/textshift
 **npm:**
 
 ```bash
-npx jsr add @neabyte/textshift
+npm install @neabyte/textshift
+```
+
+**CDN (jsDelivr/unpkg/esm.sh):**
+
+```html
+<script type="module">
+  import {
+    TextTransform,
+    JsonFormatter
+  } from 'https://cdn.jsdelivr.net/npm/@neabyte/textshift/dist/index.mjs'
+</script>
+```
+
+Or via [esm.sh](https://esm.sh):
+
+```html
+<script type="module">
+  import {
+    TextTransform,
+    JsonFormatter
+  } from 'https://esm.sh/@neabyte/textshift'
+</script>
+```
+
+Or via `importmap`:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "@neabyte/textshift": "https://cdn.jsdelivr.net/npm/@neabyte/textshift/dist/index.mjs"
+    }
+  }
+</script>
+<script type="module">
+  import { TextTransform, JsonFormatter } from '@neabyte/textshift'
+</script>
 ```
 
 Read [docs/README.md](docs/README.md) for full documentation.
@@ -47,6 +86,14 @@ console.log(json.data)
 //   "b": 2,
 //   "a": 1
 // }
+```
+
+## Build
+
+**npm build (bundles to `dist/`):**
+
+```bash
+npm run build
 ```
 
 ## Testing

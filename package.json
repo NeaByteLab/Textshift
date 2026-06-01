@@ -1,0 +1,72 @@
+{
+  "name": "@neabyte/textshift",
+  "description": "Zero-dependency text transformation and JSON formatting for any runtime",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "unbuild --minify",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "rm -rf dist && npm run build"
+  },
+  "keywords": [
+    "case-conversion",
+    "case-converter",
+    "deno",
+    "ecmascript",
+    "grapheme",
+    "intl-segmenter",
+    "json-beautifier",
+    "json-formatter",
+    "json-minifier",
+    "json-sorting",
+    "jsr",
+    "runtime-agnostic",
+    "sentence-case",
+    "string-manipulation",
+    "text-normalization",
+    "text-processing",
+    "text-transformation",
+    "typescript",
+    "unicode",
+    "zero-dependencies"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "unbuild": "^3.6.1"
+  },
+  "author": {
+    "name": "NeaByteLab",
+    "email": "me@neabyte.com",
+    "url": "https://github.com/NeaByteLab"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NeaByteLab/Textshift.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NeaByteLab/Textshift/issues"
+  },
+  "homepage": "https://github.com/NeaByteLab/Textshift#readme",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
